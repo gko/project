@@ -1,6 +1,6 @@
 # Create project locally and on github
 
-## Install
+## Installation
 
 You will need to install hub to use it.
 Then you need to clone repo:
@@ -9,6 +9,8 @@ git clone --depth 1 https://github.com/gko/project
 source ./project/project.sh
 ```
 
-## LICENSE
+## License
 
-MIT 2017
+[MIT](http://opensource.org/licenses/MIT)
+
+Copyright (c) 2012-2017 Konstantin Gorodinskiy
