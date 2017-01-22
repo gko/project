@@ -83,7 +83,10 @@ project() {
         fi
         ;;
       pip*)
-        # TODO pip package
+        hub clone pypa/sampleproject
+        rm -rf ./sampleproject/.git
+        mv ./sampleproject/* ./sampleproject/.git* ./sampleproject/.travis* ./
+        rm -rf ./sampleproject
         ;;
       *)
     esac
