@@ -9,6 +9,16 @@ git clone --depth 1 https://github.com/gko/project
 ```
 
 ## Usage
+```
+Usage: project [options]
+Example:
+  project -p test
+Options:
+  -h, --help      help
+  -p, --private   create private github repository
+  -f, --folder    your projects folder(defaults to ~/projects)
+  -n, --no-init   avoid initializing package
+```
 
 Add it to .bashrc or .zshrc:
 ```bash
