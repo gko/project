@@ -5,7 +5,7 @@
 You will need to install [hub](https://github.com/github/hub) to use it.
 Then you need to clone repo:
 ```bash
-git clone --depth 1 https://github.com/gko/project
+git clone --recursive --depth 1 https://github.com/gko/project
 ```
 
 ## Usage
