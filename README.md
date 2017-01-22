@@ -1,5 +1,7 @@
 # Create project locally and on github
 
+![demo](https://github.com/gko/project/raw/master/demo.gif)
+
 ## Installation
 
 You will need to install [hub](https://github.com/github/hub) to use it.
