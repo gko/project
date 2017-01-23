@@ -36,6 +36,8 @@ create private repo:
 project -p test
 ```
 
+if project already exists it will only switch to its folder
+
 ## License
 
 [MIT](http://opensource.org/licenses/MIT)
