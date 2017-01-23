@@ -10,6 +10,11 @@ Then you need to clone repo:
 git clone --recursive --depth 1 https://github.com/gko/project
 ```
 
+then add it to .bashrc or .zshrc:
+```bash
+source ./project/project.sh
+```
+
 ## Usage
 ```
 Usage: project [options]
@@ -22,10 +27,6 @@ Options:
   -n, --no-init   avoid initializing package
 ```
 
-Add it to .bashrc or .zshrc:
-```bash
-source ./project/project.sh
-```
 then to create public repo:
 ```bash
 project test
