@@ -1,4 +1,6 @@
-# Create project locally and on github
+# Project 
+
+Create project locally and on github
 
 ![demo](https://github.com/gko/project/raw/master/demo.gif)
 
