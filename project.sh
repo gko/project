@@ -62,8 +62,13 @@ project() {
     return 0
   fi
 
-  echo -e "\n  initializing repository..."
-  hub init .
+  if hub --version > /dev/null 2>&1; then
+    echo -e "\n  initializing repository..."
+    hub init .
+  else
+    echo -e "\n  hub is not installed"
+    return 1
+  fi
 
   if [ -z $noinit ]; then
     local package=$(listbox -t "Choose package:" -o "npm|gem|pip" | tee /dev/tty | tail -n 1)
