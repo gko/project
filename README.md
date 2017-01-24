@@ -6,15 +6,24 @@ Create project locally and on github
 
 ## Installation
 
+### Manually
+
 You will need to install [hub](https://github.com/github/hub) to use it.
 Then you need to clone repo:
+
 ```bash
 git clone --recursive --depth 1 https://github.com/gko/project
 ```
-
 then add it to .bashrc or .zshrc:
 ```bash
 source ./project/project.sh
+```
+
+### With [antigen](https://github.com/zsh-users/antigen)
+
+In your .zshrc
+```sh
+antigen bundle gko/project
 ```
 
 ## Usage
