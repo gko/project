@@ -35,7 +35,7 @@ project() {
         local private=1
         ;;
       -f|--folder)
-        local projectFolder="$2"
+        local projects="$2"
         shift 1
         ;;
       -n|--no-init)
@@ -49,10 +49,15 @@ project() {
   done
 
   if [ -z "$name" ]; then
+    echo -e "\n  Please specify project name"
     return 1
   fi
 
-  if [ -z "$projectFolder" ]; then
+  if [ -n "$projects" ]; then
+    local projectFolder="$projects"
+  elif [ -n "$PROJECTS_HOME" ]; then
+    local projectFolder="$PROJECTS_HOME"
+  else
     local projectFolder=~/projects
   fi
 
