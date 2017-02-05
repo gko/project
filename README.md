@@ -52,7 +52,7 @@ if project already exists it will only switch to its folder
 
 ### Projects path
 
-You can specify projects path by either -f key or `$PROJECTS_HOME` variable:
+You can specify projects path by either `-f` key or `$PROJECTS_HOME` variable:
 ```bash
 project -f /projects_path
 ```
@@ -60,7 +60,7 @@ or
 ```bash
 export PROJECTS_HOME=/projects_path
 ```
-Otherwise default path is ~/projects
+Otherwise default path is `~/projects`
 
 ## License
 
