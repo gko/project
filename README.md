@@ -50,6 +50,18 @@ project -p test
 
 if project already exists it will only switch to its folder
 
+### Projects path
+
+You can specify projects path by either -f key or `$PROJECTS_HOME` variable:
+```bash
+project -f /projects_path
+```
+or
+```bash
+export PROJECTS_HOME=/projects_path
+```
+Otherwise default path is ~/projects
+
 ## License
 
 [MIT](http://opensource.org/licenses/MIT)
