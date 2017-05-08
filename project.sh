@@ -64,7 +64,7 @@ project() {
   echo -e "\n  project folder: $projectFolder/$name"
   mkdir -p "$projectFolder/$name"
   cd "$projectFolder/$name"
-  
+
   if [ -d ./.git ]; then
     return 0
   fi
@@ -79,7 +79,7 @@ project() {
 
   if [ -z $noinit ]; then
     local package=$(listbox -t "Choose package:" -o "npm|gem|pip" | tee /dev/tty | tail -n 1)
-    
+
     case "$package" in
       npm*)
         if npm -v > /dev/null 2>&1; then
@@ -108,7 +108,18 @@ project() {
     echo -e "\n  creating private github repository..."
     hub create -p $name
   else
-    echo -e "\n  creating public github repository..."
-    hub create $name
+    local repo=$(listbox -t "Create github repo:" -o "private|public" | tee /dev/tty | tail -n 1)
+
+    case "$repo" in
+      private*)
+        echo -e "\n  creating private github repository..."
+        hub create -p $name
+        ;;
+      public*)
+        echo -e "\n  creating public github repository..."
+        hub create $name
+        ;;
+      *)
+    esac
   fi
 }
