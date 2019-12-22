@@ -1,0 +1,9 @@
+#compdef project
+
+if [ -n "$PROJECTS_HOME" ]; then
+	local projectFolder="$PROJECTS_HOME"
+else
+	local projectFolder=~/projects
+fi
+
+_files -W $projectFolder
