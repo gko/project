@@ -1,26 +1,12 @@
 # Project
 
-Create `npm`, `cargo`, `gem` or `pip` project locally and on `github`.
+Create `npm`, `cargo`, `gem` or `pip` project locally and on `github` or just `cd` into existing.
 
 ![demo](https://github.com/gko/project/raw/master/demo.png)
 
 After project init you will be prompted to create a `github` repo (private or public).
 
 ![github](https://github.com/gko/project/raw/master/github.png)
-
-If the project exist you will just `cd` into its folder.
-
-Supports `zsh-autocomplete`. On <kbd>Tab</kbd> will show the list of available projects.
-
-You can also alias it (in `~/.zshrc` or `~/.bashrc`):
-```shell
-alias p='project'
-```
-
-to get:
-```shell
-p test-project
-```
 
 ## Installation
 
@@ -66,7 +52,21 @@ create private repo:
 project -p test
 ```
 
-if project already exists it will only switch to its folder
+If the project exist you will just `cd` into its folder.
+
+### Autocomplete
+
+Supports `zsh-autocomplete`. On <kbd>Tab</kbd> will show the list of available projects.
+
+You can also alias it (in `~/.zshrc` or `~/.bashrc`):
+```shell
+alias p='project'
+```
+
+to get:
+```shell
+p test-project
+```
 
 ### Projects path
 
