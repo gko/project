@@ -14,6 +14,13 @@ Supports `zsh-autocomplete`. On <kbd>Tab</kbd> will show the list of available p
 
 ## Installation
 
+### With [antigen](https://github.com/zsh-users/antigen)
+
+In your .zshrc
+```sh
+antigen bundle gko/project
+```
+
 ### Manually
 
 You will need to install [hub](https://github.com/github/hub) to use it.
@@ -25,13 +32,6 @@ git clone --recursive --depth 1 https://github.com/gko/project
 then add it to .bashrc or .zshrc:
 ```bash
 source ./project/project.sh
-```
-
-### With [antigen](https://github.com/zsh-users/antigen)
-
-In your .zshrc
-```sh
-antigen bundle gko/project
 ```
 
 ## Usage
