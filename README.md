@@ -1,8 +1,16 @@
-# Project 
+# Project
 
-Create project locally and on github
+Create `npm`, `cargo`, `gem` or `pip` project locally and on `github`.
 
-![demo](https://github.com/gko/project/raw/master/demo.gif)
+![demo](https://github.com/gko/project/raw/master/demo.png)
+
+After project init you will be prompted to create a `github` repo (private or public).
+
+![github](https://github.com/gko/project/raw/master/github.png)
+
+If the project exist you will just `cd` into its folder.
+
+Support `zsh-autocomplete`. On <kbd>Tab</kbd> will show the list of available projects.
 
 ## Installation
 
