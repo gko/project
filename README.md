@@ -10,7 +10,7 @@ After project init you will be prompted to create a `github` repo (private or pu
 
 If the project exist you will just `cd` into its folder.
 
-Support `zsh-autocomplete`. On <kbd>Tab</kbd> will show the list of available projects.
+Supports `zsh-autocomplete`. On <kbd>Tab</kbd> will show the list of available projects.
 
 ## Installation
 
