@@ -12,7 +12,7 @@ If the project exist you will just `cd` into its folder.
 
 Supports `zsh-autocomplete`. On <kbd>Tab</kbd> will show the list of available projects.
 
-You can also alias it:
+You can also alias it (in `~/.zshrc` or `~/.bashrc`):
 ```shell
 alias p='project'
 ```
