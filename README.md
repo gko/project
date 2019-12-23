@@ -8,6 +8,8 @@ After project init you will be prompted to create a `github` repo (private or pu
 
 ![github](https://github.com/gko/project/raw/master/github.png)
 
+You can read more about it in the «[Managing your projects](https://dev.to/konstantin/managing-your-projects-31p1)» article.
+
 ## Installation
 
 ### With [antigen](https://github.com/zsh-users/antigen)
@@ -84,4 +86,4 @@ Otherwise default path is `~/projects`
 
 [MIT](http://opensource.org/licenses/MIT)
 
-Copyright (c) 2012-2017 Konstantin Gorodinskiy
+Copyright (c) 2012-2019 Konstantin Gorodinskiy
