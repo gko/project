@@ -12,6 +12,16 @@ If the project exist you will just `cd` into its folder.
 
 Supports `zsh-autocomplete`. On <kbd>Tab</kbd> will show the list of available projects.
 
+You can also alias it:
+```shell
+alias p='project'
+```
+
+to get:
+```shell
+p test-project
+```
+
 ## Installation
 
 ### With [antigen](https://github.com/zsh-users/antigen)
