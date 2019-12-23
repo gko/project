@@ -113,7 +113,7 @@ project() {
         echo -e "\n  creating private github repository..."
         hub create -p $name
     else
-        local repo=$(listbox -t "Create github repo:" -o "private|public" | tee /dev/tty | tail -n 1)
+        local repo=$(listbox -t "Create github repo (Ctrl + C to exit):" -o "private|public" | tee /dev/tty | tail -n 1)
 
         case "$repo" in
             private*)
