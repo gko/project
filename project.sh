@@ -78,12 +78,17 @@ project() {
   fi
 
   if [ -z $noinit ]; then
-    local package=$(listbox -t "Choose package:" -o "npm|gem|pip" | tee /dev/tty | tail -n 1)
+		local package=$(listbox -t "Choose package (Ctrl + C to exit):" -o "npm|cargo|gem|pip" | tee /dev/tty | tail -n 1)
 
     case "$package" in
       npm*)
         if npm -v > /dev/null 2>&1; then
           npm init
+        fi
+        ;;
+      cargo*)
+        if cargo -V > /dev/null 2>&1; then
+          cargo init
         fi
         ;;
       gem*)
