@@ -12,6 +12,8 @@ You can read more about it in the «[Managing your projects](https://dev.to/kons
 
 ## Installation
 
+You will need to install [hub](https://github.com/github/hub) in order to create project repository on `github`.
+
 ### With [antigen](https://github.com/zsh-users/antigen)
 
 In your .zshrc
@@ -21,8 +23,7 @@ antigen bundle gko/project
 
 ### Manually
 
-You will need to install [hub](https://github.com/github/hub) to use it.
-Then you need to clone repo:
+You need to clone repo:
 
 ```bash
 git clone --recursive --depth 1 https://github.com/gko/project
