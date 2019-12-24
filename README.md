@@ -82,6 +82,10 @@ export PROJECTS_HOME=/projects_path
 ```
 Otherwise default path is `~/projects`
 
+## Like it?
+
+:star: this repo
+
 ## License
 
 [MIT](http://opensource.org/licenses/MIT)
