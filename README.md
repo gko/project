@@ -57,6 +57,8 @@ project -p test
 
 If the project exist you will just `cd` into its folder.
 
+If no name is given you will just `cd` to `projects` folder with an error.
+
 ### Autocomplete
 
 Supports `zsh-autocomplete`. On <kbd>Tab</kbd> will show the list of available projects.
