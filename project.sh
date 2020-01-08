@@ -49,6 +49,7 @@ project() {
     done
 
     if [ -z "$name" ]; then
+        cd $PROJECTS_HOME
         echo -e "\n  Please specify project name"
         return 1
     fi
