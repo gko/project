@@ -48,18 +48,18 @@ project() {
         shift
     done
 
-    if [ -z "$name" ]; then
-        cd $PROJECTS_HOME
-        echo -e "\n  Please specify project name"
-        return 1
-    fi
-
     if [ -n "$projects" ]; then
         local projectFolder="$projects"
     elif [ -n "$PROJECTS_HOME" ]; then
         local projectFolder="$PROJECTS_HOME"
     else
         local projectFolder=~/projects
+    fi
+
+    if [ -z "$name" ]; then
+        cd $projectFolder
+        echo -e "\n  Please specify project name"
+        return 1
     fi
 
     echo -e "\n  project folder: $projectFolder/$name"
