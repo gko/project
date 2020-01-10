@@ -58,8 +58,8 @@ project() {
 
     if [ -z "$name" ]; then
         cd $projectFolder
-        echo -e "\n  Please specify project name"
-        return 1
+        # echo -e "\n  Please specify project name"
+        return 0
     fi
 
     echo -e "\n  project folder: $projectFolder/$name"
