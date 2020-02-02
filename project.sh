@@ -62,6 +62,17 @@ project() {
         return 0
     fi
 
+    # only for zsh since read is a bit of a mess on bash
+    if [[ ! -d $projectFolder/$name &&  -n "$ZSH_VERSION" ]]; then
+        echo -e ""
+        read "?  «$projectFolder/$name» doesn't exist. Do you want to create it? (y/n) " answer </dev/tty
+
+        # y or just Enter
+        if ! [[ "$answer" =~ [yY] || "$answer" = "" ]]; then
+            return 0;
+        fi
+    fi
+
     echo -e "\n  project folder: $projectFolder/$name"
     mkdir -p "$projectFolder/$name"
     cd "$projectFolder/$name"
