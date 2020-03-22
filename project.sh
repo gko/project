@@ -62,6 +62,14 @@ project() {
         return 0
     fi
 
+    if [ -n "$ZSH_VERSION" ]; then
+        read -q "REPLY?Project folder doesn't exist. Would you like to create it? (y/n) : "
+
+        if [[ $REPLY =~ ^[^Yy]$ ]]; then
+            return 0
+        fi
+    fi
+
     echo -e "\n  project folder: $projectFolder/$name"
     mkdir -p "$projectFolder/$name"
     cd "$projectFolder/$name"
