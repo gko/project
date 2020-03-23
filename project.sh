@@ -63,7 +63,9 @@ project() {
     fi
 
     if [[ -n "$ZSH_VERSION" && ! -a "$projectFolder/$name" ]]; then
-        read -q "REPLY?Project folder doesn't exist. Would you like to create it? (y/n) : "
+        echo ""
+        read -q "REPLY?  Project folder doesn't exist. Would you like to create it? (y/n) : "
+        echo ""
 
         if [[ $REPLY =~ ^[^Yy]$ ]]; then
             return 0
