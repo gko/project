@@ -60,13 +60,13 @@ project() {
         cd $projectFolder
 
         return 0
-    fi
+    else
+        if [ -n "$ZSH_VERSION" ]; then
+            read -q "REPLY?Project folder doesn't exist. Would you like to create it? (y/n) : "
 
-    if [ -n "$ZSH_VERSION" ]; then
-        read -q "REPLY?Project folder doesn't exist. Would you like to create it? (y/n) : "
-
-        if [[ $REPLY =~ ^[^Yy]$ ]]; then
-            return 0
+            if [[ $REPLY =~ ^[^Yy]$ ]]; then
+                return 0
+            fi
         fi
     fi
 
