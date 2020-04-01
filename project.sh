@@ -74,6 +74,7 @@ project() {
     fi
 
     echo -e "\n  project folder: $projectFolder/$name"
+
     mkdir -p "$projectFolder/$name"
     cd "$projectFolder/$name"
 
