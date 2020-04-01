@@ -73,7 +73,7 @@ project() {
         fi
     fi
 
-    echo -e "\n  project folder: $projectFolder/$name"
+    echo -e "\n switched to project folder: $projectFolder/$name"
 
     mkdir -p "$projectFolder/$name"
     cd "$projectFolder/$name"
