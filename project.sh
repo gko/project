@@ -86,7 +86,7 @@ project() {
 
     mkdir -p "$projectFolder/$name"
 
-    if [[ $PWD =~ "^$projectFolder" ]]; then
+    if [[ $PWD =~ "^$projectFolder" && $PWD != "$projectFolder" ]]; then
         export OLDPROJECTPWD="$PWD"
     fi
 
