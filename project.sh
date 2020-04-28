@@ -48,6 +48,15 @@ project() {
         shift
     done
 
+    # go to last project
+    if [[ $name == "-" && -n "$OLDPROJECTPWD" ]]; then
+        cd "$OLDPROJECTPWD"
+
+        echo -e "\n switched to project folder: $OLDPROJECTPWD"
+
+        return 0
+    fi
+
     if [ -n "$projects" ]; then
         local projectFolder="$projects"
     elif [ -n "$PROJECTS_HOME" ]; then
@@ -76,6 +85,11 @@ project() {
     echo -e "\n switched to project folder: $projectFolder/$name"
 
     mkdir -p "$projectFolder/$name"
+
+    if [[ $PWD =~ "^$projectFolder" ]]; then
+        export OLDPROJECTPWD="$PWD"
+    fi
+
     cd "$projectFolder/$name"
 
     if [ -d ./.git ]; then
