@@ -54,6 +54,10 @@ project() {
 
         echo -e "\n switched to project folder: $OLDPROJECTPWD"
 
+        if [[ $PWD =~ "^$projectFolder" && $PWD != "$projectFolder" ]]; then
+            export OLDPROJECTPWD="$PWD"
+        fi
+
         return 0
     fi
 
