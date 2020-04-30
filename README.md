@@ -59,6 +59,8 @@ If the project exist you will just `cd` into its folder.
 
 If no name is given you will just `cd` to `projects` folder.
 
+If you type `project -` then you'll jump to previous project folder.
+
 ### Autocomplete
 
 Supports `zsh-autocomplete`. On <kbd>Tab</kbd> will show the list of available projects.

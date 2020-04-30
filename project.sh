@@ -48,6 +48,14 @@ project() {
         shift
     done
 
+    if [ -n "$projects" ]; then
+        local projectFolder="$projects"
+    elif [ -n "$PROJECTS_HOME" ]; then
+        local projectFolder="$PROJECTS_HOME"
+    else
+        local projectFolder=~/projects
+    fi
+
     # go to last project
     if [[ $name == "-" && -n "$OLDPROJECTPWD" ]]; then
         cd "$OLDPROJECTPWD"
@@ -59,14 +67,6 @@ project() {
         fi
 
         return 0
-    fi
-
-    if [ -n "$projects" ]; then
-        local projectFolder="$projects"
-    elif [ -n "$PROJECTS_HOME" ]; then
-        local projectFolder="$PROJECTS_HOME"
-    else
-        local projectFolder=~/projects
     fi
 
     if [ -z "$name" ]; then
