@@ -57,13 +57,19 @@ project() {
     fi
 
     # go to last project
-    if [[ $name == "-" && -n "$OLDPROJECTPWD" ]]; then
-        cd "$OLDPROJECTPWD"
+    if [[ $name == "-" ]]; then
+        if [[ -n "$OLDPROJECTPWD" ]]; then
+            local oldProject="$OLDPROJECTPWD"
 
-        echo -e "\n switched to project folder: $OLDPROJECTPWD"
+            if [[ $PWD =~ "^$projectFolder" && $PWD != "$projectFolder" ]]; then
+                export OLDPROJECTPWD="$PWD"
+            fi
 
-        if [[ $PWD =~ "^$projectFolder" && $PWD != "$projectFolder" ]]; then
-            export OLDPROJECTPWD="$PWD"
+            cd "$oldProject"
+
+            echo -e "\n switched to project folder: $oldProject"
+        else
+            cd $projectFolder
         fi
 
         return 0
