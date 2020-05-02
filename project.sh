@@ -56,6 +56,25 @@ project() {
         local projectFolder=~/projects
     fi
 
+    # go to last project
+    if [[ $name == "-" ]]; then
+        if [[ -n "$OLDPROJECTPWD" ]]; then
+            local oldProject="$OLDPROJECTPWD"
+
+            if [[ $PWD =~ "^$projectFolder" && $PWD != "$projectFolder" ]]; then
+                export OLDPROJECTPWD="$PWD"
+            fi
+
+            cd "$oldProject"
+
+            echo -e "\n switched to project folder: $oldProject"
+        else
+            cd $projectFolder
+        fi
+
+        return 0
+    fi
+
     if [ -z "$name" ]; then
         cd $projectFolder
 
@@ -76,6 +95,11 @@ project() {
     echo -e "\n switched to project folder: $projectFolder/$name"
 
     mkdir -p "$projectFolder/$name"
+
+    if [[ $PWD =~ "^$projectFolder" && $PWD != "$projectFolder" ]]; then
+        export OLDPROJECTPWD="$PWD"
+    fi
+
     cd "$projectFolder/$name"
 
     if [ -d ./.git ]; then
