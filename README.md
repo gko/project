@@ -12,7 +12,7 @@ You can read more about it in the «[Managing your projects](https://dev.to/kons
 
 ## Installation
 
-You will need to install ~~hub~~ [github cli](https://cli.github.com/) in order to create project repository on `github`.
+You will need to install ~~hub~~ [github cli](https://cli.github.com/) (see this [PR](https://github.com/gko/project/pull/7)) in order to create project repository on `github`.
 
 ### With [antigen](https://github.com/zsh-users/antigen)
 
