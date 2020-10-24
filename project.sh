@@ -106,11 +106,11 @@ project() {
         return 0
     fi
 
-    if hub --version > /dev/null 2>&1; then
+    if gh --version > /dev/null 2>&1; then
         echo -e "\n  initializing repository..."
-        hub init .
+        git init .
     else
-        echo -e "\n  hub is not installed"
+        echo -e "\n  gh is not installed. Please refer to https://cli.github.com/"
         return 1
     fi
 
@@ -137,7 +137,7 @@ project() {
                 fi
                 ;;
             pip*)
-                hub clone pypa/sampleproject
+                gh repo clone pypa/sampleproject
                 rm -rf ./sampleproject/.git
                 mv ./sampleproject/* ./sampleproject/.git* ./sampleproject/.travis* ./
                 rm -rf ./sampleproject
@@ -148,18 +148,18 @@ project() {
 
     if [[ $private -eq 1 ]]; then
         echo -e "\n  creating private github repository..."
-        hub create -p $name
+        gh repo create --private $name
     else
         local repo=$(listbox -t "Create github repo (Ctrl + C to exit):" -o "private|public" | tee /dev/tty | tail -n 1)
 
         case "$repo" in
             private*)
                 echo -e "\n  creating private github repository..."
-                hub create -p $name
+                gh repo create --private $name
                 ;;
             public*)
                 echo -e "\n  creating public github repository..."
-                hub create $name
+                gh repo create --public $name
                 ;;
             *)
         esac
