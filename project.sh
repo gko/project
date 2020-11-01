@@ -115,7 +115,7 @@ project() {
     fi
 
     if [ -z $noinit ]; then
-        local package=$(listbox -t "Choose package (Ctrl + C to exit):" -o "npm|cargo|gem|pip" | tee /dev/tty | tail -n 1)
+        local package=$(listbox -t "Choose package (Ctrl + C to exit):" -o "npm|cargo|gem|pip|none" | tee /dev/tty | tail -n 1)
 
         case "$package" in
             npm*)
