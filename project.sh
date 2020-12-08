@@ -102,7 +102,7 @@ project() {
 
     cd "$projectFolder/$name"
 
-    if [ -d ./.git ]; then
+    if [[ -d ./.git || -f ./.git ]]; then
         return 0
     fi
 
