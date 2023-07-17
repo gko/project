@@ -76,7 +76,16 @@ project() {
     fi
 
     if [ -z "$name" ]; then
-        cd $projectFolder
+        if [[ -f $projectFolder ]]; then
+            echo -e "\n you already have a file called «$projectFolder»\n please specify PROJECTS_HOME variable\n see https://github.com/gko/project#projects-path\n"
+        elif [[ ! -d $projectFolder ]]; then
+            echo -e "\n creating and switching to «$projectFolder»\n"
+            mkdir -p $projectFolder
+            cd $projectFolder
+        else
+            echo -e "\n switching to «$projectFolder»\n"
+            cd $projectFolder
+        fi
 
         return 0
     fi
