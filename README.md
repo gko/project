@@ -2,11 +2,11 @@
 
 Create `npm`, `cargo`, `gem` or `pip` project locally and on `github` or just `cd` into existing.
 
-![demo](https://github.com/gko/project/raw/main/demo.png)
+![demo](/demo.png)
 
 After project init you will be prompted to create a `github` repo (private or public).
 
-![github](https://github.com/gko/project/raw/main/github.png)
+![github](/github.png)
 
 You can read more about it in the «[Managing your projects](https://dev.to/konstantin/managing-your-projects-31p1)» article.
 
