@@ -95,4 +95,4 @@ Otherwise default path is `~/projects`
 
 [MIT](http://opensource.org/licenses/MIT)
 
-Copyright (c) 2012-2019 Konstantin Gorodinskiy
+Copyright (c) 2012-2023 Konstantin Gorodinskiy
