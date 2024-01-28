@@ -157,18 +157,18 @@ project() {
 
     if [[ $private -eq 1 ]]; then
         echo -e "\n  creating private github repository..."
-        gh repo create --private $name
+        gh repo create --private $name --source=. --remote=origin
     else
         local repo=$(listbox -t "Create github repo (Ctrl + C to exit):" -o "private|public" | tee /dev/tty | tail -n 1)
 
         case "$repo" in
             private*)
                 echo -e "\n  creating private github repository..."
-                gh repo create --private $name
+                gh repo create --private $name --source=. --remote=origin
                 ;;
             public*)
                 echo -e "\n  creating public github repository..."
-                gh repo create --public $name
+                gh repo create --public $name --source=. --remote=origin
                 ;;
             *)
         esac
