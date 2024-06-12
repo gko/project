@@ -115,13 +115,8 @@ project() {
         return 0
     fi
 
-    if gh --version > /dev/null 2>&1; then
-        echo -e "\n  initializing repository..."
-        git init .
-    else
-        echo -e "\n  gh is not installed. Please refer to https://cli.github.com/"
-        return 1
-    fi
+    echo -e "\n  initializing repository..."
+    git init .
 
     if [ -z $noinit ]; then
         local package=$(listbox -t "Choose package (Ctrl + C to exit):" -o "npm|cargo|gem|pip|none" | tee /dev/tty | tail -n 1)
@@ -146,13 +141,18 @@ project() {
                 fi
                 ;;
             pip*)
-                gh repo clone pypa/sampleproject
+                git clone https://github.com/pypa/sampleproject.git
                 rm -rf ./sampleproject/.git
-                mv ./sampleproject/* ./sampleproject/.git* ./sampleproject/.travis* ./
+                mv ./sampleproject/* ./sampleproject/.git* ./
                 rm -rf ./sampleproject
                 ;;
             *)
         esac
+    fi
+
+    if ! gh --version > /dev/null 2>&1; then
+        echo -e "\n  gh is not installed. Please refer to https://cli.github.com/"
+        return 1
     fi
 
     if [[ $private -eq 1 ]]; then
